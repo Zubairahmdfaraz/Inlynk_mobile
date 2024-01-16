@@ -1,9 +1,13 @@
 # Ignore test result files
 *.log
 *.xml
-*.idea
-*.pytest_cache
-*.vscode
+# Ignore IDE settings
+.idea/
 
-# Ignore virtual environment directories
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore virtual environment directory
 inlynk_env/
+
+
