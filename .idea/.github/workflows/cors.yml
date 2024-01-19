@@ -1,0 +1,21 @@
+name: Add CORS headers
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Add CORS headers
+        run: |
+          echo "Access-Control-Allow-Origin: *" >> Test_Cases/test_login.py
+          echo "Access-Control-Allow-Origin: *" >> Test_Cases/test_networks.py
+
+        shell: bash
